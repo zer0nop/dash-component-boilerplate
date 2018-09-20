@@ -4,8 +4,10 @@ import classNames from 'classnames';
 import { Target } from 'react-popper';
 import { mapToCssModules } from '../utils/utils';
 import Button from './Button';
+import { withDropDownContext } from '../contexts/DropDownContext'
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   caret: PropTypes.bool,
   color: PropTypes.string,
   children: PropTypes.node,
@@ -24,13 +26,7 @@ const defaultProps = {
   color: 'secondary',
 };
 
-const contextTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
-  inNavbar: PropTypes.bool.isRequired,
-};
-
-class DropdownToggle extends React.Component {
+class DropdownToggleBase extends React.Component {
   constructor(props) {
     super(props);
 
@@ -51,7 +47,9 @@ class DropdownToggle extends React.Component {
       this.props.onClick(e);
     }
 
-    this.context.toggle(e);
+    if (this.props.context.toggle) {
+      this.props.context.toggle(e);
+    }
   }
 
   render() {
@@ -80,13 +78,13 @@ class DropdownToggle extends React.Component {
       Tag = tag;
     }
 
-    if (this.context.inNavbar) {
+    if (this.props.context.inNavbar) {
       return (
         <Tag
           {...props}
           className={classes}
           onClick={this.onClick}
-          aria-expanded={this.context.isOpen}
+          aria-expanded={this.props.context.isOpen}
           children={children}
         />
       );
@@ -98,15 +96,16 @@ class DropdownToggle extends React.Component {
         className={classes}
         component={Tag}
         onClick={this.onClick}
-        aria-expanded={this.context.isOpen}
+        aria-expanded={this.props.context.isOpen}
         children={children}
       />
     );
   }
 }
 
-DropdownToggle.propTypes = propTypes;
-DropdownToggle.defaultProps = defaultProps;
-DropdownToggle.contextTypes = contextTypes;
+DropdownToggleBase.propTypes = propTypes;
+DropdownToggleBase.defaultProps = defaultProps;
+
+const DropdownToggle = withDropDownContext(DropdownToggleBase)
 
 export default DropdownToggle;

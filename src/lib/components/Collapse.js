@@ -5,6 +5,7 @@ import Transition from 'react-transition-group/Transition';
 import { mapToCssModules, omit, pick, TransitionTimeouts, TransitionPropTypeKeys, TransitionStatuses } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ...Transition.propTypes,
   isOpen: PropTypes.bool,
   children: PropTypes.oneOfType([

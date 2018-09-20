@@ -4,6 +4,7 @@ import Alert from './Alert';
 import Fade from './Fade';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   className: PropTypes.string,
   closeClassName: PropTypes.string,

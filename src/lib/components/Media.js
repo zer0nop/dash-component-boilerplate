@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { mapToCssModules } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   body: PropTypes.bool,
   bottom: PropTypes.bool,
   children: PropTypes.node,

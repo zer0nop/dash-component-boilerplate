@@ -21,6 +21,7 @@ const CarouselCaption = (props) => {
 };
 
 CarouselCaption.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   captionHeader: PropTypes.string,
   captionText: PropTypes.string.isRequired,
   cssModule: PropTypes.object,

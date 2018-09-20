@@ -7,8 +7,10 @@ import ReactDOM from 'react-dom';
 import { Manager } from 'react-popper';
 import classNames from 'classnames';
 import { mapToCssModules, omit, keyCodes, deprecated } from '../utils/utils';
+import { DropDownContext } from '../contexts/DropDownContext'
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   dropup: deprecated(PropTypes.bool, 'Please use the prop "direction" with the value "up".'),
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
@@ -37,13 +39,6 @@ const defaultProps = {
   setActiveFromChild: false
 };
 
-const childContextTypes = {
-  toggle: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired,
-  inNavbar: PropTypes.bool.isRequired,
-};
-
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
@@ -53,15 +48,6 @@ class Dropdown extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.removeEvents = this.removeEvents.bind(this);
     this.toggle = this.toggle.bind(this);
-  }
-
-  getChildContext() {
-    return {
-      toggle: this.props.toggle,
-      isOpen: this.props.isOpen,
-      direction: (this.props.direction === 'down' && this.props.dropup) ? 'up' : this.props.direction,
-      inNavbar: this.props.inNavbar,
-    };
   }
 
   componentDidMount() {
@@ -190,6 +176,7 @@ class Dropdown extends React.Component {
       setActiveFromChild,
       active,
       addonType,
+      children,
       ...attrs
     } = omit(this.props, ['toggle', 'disabled', 'inNavbar', 'direction']);
 
@@ -221,12 +208,23 @@ class Dropdown extends React.Component {
       }
     ), cssModule);
 
-    return <Manager {...attrs} className={classes} onKeyDown={this.handleKeyDown} />;
+    return (
+      <Manager {...attrs} className={classes} onKeyDown={this.handleKeyDown}>
+        <DropDownContext.Provider value={{
+          toggle: this.props.toggle,
+          isOpen: this.props.isOpen,
+          direction: (this.props.direction === 'down' && this.props.dropup) ? 'up' : this.props.direction,
+          inNavbar: this.props.inNavbar,
+        }}>
+          {children}
+        </DropDownContext.Provider>
+
+      </Manager>
+    );
   }
 }
 
 Dropdown.propTypes = propTypes;
 Dropdown.defaultProps = defaultProps;
-Dropdown.childContextTypes = childContextTypes;
 
 export default Dropdown;

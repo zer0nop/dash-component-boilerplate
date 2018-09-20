@@ -6,6 +6,7 @@ import { Arrow, Popper as ReactPopper } from 'react-popper';
 import { getTarget, targetPropType, mapToCssModules } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   className: PropTypes.string,
   placement: PropTypes.string,

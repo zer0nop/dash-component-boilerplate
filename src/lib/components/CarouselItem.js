@@ -91,6 +91,7 @@ class CarouselItem extends React.Component {
 }
 
 CarouselItem.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ...Transition.propTypes,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   in: PropTypes.bool,

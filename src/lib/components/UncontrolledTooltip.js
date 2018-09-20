@@ -4,6 +4,7 @@ import Tooltip from './Tooltip';
 import { PopperPlacements, targetPropType } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   placement: PropTypes.oneOf(PopperPlacements),
   target: targetPropType.isRequired,
   container: targetPropType,

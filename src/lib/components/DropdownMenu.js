@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Popper } from 'react-popper';
 import { mapToCssModules } from '../utils/utils';
+import { withDropDownContext } from '../contexts/DropDownContext';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   tag: PropTypes.string,
   right: PropTypes.bool,
@@ -20,12 +22,6 @@ const defaultProps = {
   flip: true,
 };
 
-const contextTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired,
-  inNavbar: PropTypes.bool.isRequired,
-};
-
 const noFlipModifier = { flip: { enabled: false } };
 
 const directionPositionMap = {
@@ -35,8 +31,8 @@ const directionPositionMap = {
   down: 'bottom',
 };
 
-const DropdownMenu = (props, context) => {
-  const { className, cssModule, right, tag, flip, modifiers, persist, ...attrs } = props;
+const DropdownMenuBase = (props) => {
+  const { className, cssModule, right, tag, flip, modifiers, persist, context, ...attrs } = props;
   const classes = mapToCssModules(classNames(
     className,
     'dropdown-menu',
@@ -73,8 +69,9 @@ const DropdownMenu = (props, context) => {
   );
 };
 
-DropdownMenu.propTypes = propTypes;
-DropdownMenu.defaultProps = defaultProps;
-DropdownMenu.contextTypes = contextTypes;
+DropdownMenuBase.propTypes = propTypes;
+DropdownMenuBase.defaultProps = defaultProps;
+
+const DropdownMenu = withDropDownContext(DropdownMenuBase)
 
 export default DropdownMenu;

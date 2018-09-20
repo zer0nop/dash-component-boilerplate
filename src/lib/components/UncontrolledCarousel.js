@@ -7,6 +7,7 @@ import CarouselIndicators from './CarouselIndicators';
 import CarouselCaption from './CarouselCaption';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   items: PropTypes.array.isRequired,
   indicators: PropTypes.bool,
   controls: PropTypes.bool,

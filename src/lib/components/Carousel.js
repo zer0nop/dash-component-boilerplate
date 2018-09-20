@@ -173,6 +173,7 @@ class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   // the current active slide of the carousel
   activeIndex: PropTypes.number,
   // a function which should advance the carousel to the next slide (via activeIndex)

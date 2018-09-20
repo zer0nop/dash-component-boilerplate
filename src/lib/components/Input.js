@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import { mapToCssModules, deprecated, warnOnce } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   type: PropTypes.string,
   size: PropTypes.string,
@@ -20,6 +21,8 @@ const propTypes = {
   addon: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 const defaultProps = {

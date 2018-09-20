@@ -5,6 +5,7 @@ import toNumber from 'lodash.tonumber';
 import { mapToCssModules } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   bar: PropTypes.bool,
   multi: PropTypes.bool,

@@ -21,6 +21,8 @@ const columnProps = PropTypes.oneOfType([
 ]);
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  children: PropTypes.node,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   xs: columnProps,
   sm: columnProps,

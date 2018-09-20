@@ -5,6 +5,7 @@ import Transition from 'react-transition-group/Transition';
 import { mapToCssModules, omit, pick, TransitionPropTypeKeys, TransitionTimeouts } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ...Transition.propTypes,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

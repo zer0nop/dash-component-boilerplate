@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules, omit } from '../utils/utils';
+import { withDropDownContext } from '../contexts/DropDownContext'
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   active: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -16,16 +18,12 @@ const propTypes = {
   toggle: PropTypes.bool
 };
 
-const contextTypes = {
-  toggle: PropTypes.func
-};
-
 const defaultProps = {
   tag: 'button',
   toggle: true
 };
 
-class DropdownItem extends React.Component {
+class DropdownItemBase extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,8 +41,8 @@ class DropdownItem extends React.Component {
       this.props.onClick(e);
     }
 
-    if (this.props.toggle) {
-      this.context.toggle(e);
+    if (this.props.toggle && this.props.context.toggle) {
+      this.props.context.toggle(e);
     }
   }
 
@@ -100,8 +98,9 @@ class DropdownItem extends React.Component {
   }
 }
 
-DropdownItem.propTypes = propTypes;
-DropdownItem.defaultProps = defaultProps;
-DropdownItem.contextTypes = contextTypes;
+DropdownItemBase.propTypes = propTypes;
+DropdownItemBase.defaultProps = defaultProps;
+
+const DropdownItem = withDropDownContext(DropdownItemBase)
 
 export default DropdownItem;

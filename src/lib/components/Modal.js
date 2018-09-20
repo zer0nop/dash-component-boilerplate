@@ -18,6 +18,7 @@ function noop() { }
 const FadePropTypes = PropTypes.shape(Fade.propTypes);
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   isOpen: PropTypes.bool,
   autoFocus: PropTypes.bool,
   centered: PropTypes.bool,

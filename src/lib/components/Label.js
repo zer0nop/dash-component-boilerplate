@@ -21,11 +21,12 @@ const columnProps = PropTypes.oneOfType([
 ]);
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
   hidden: PropTypes.bool,
   check: PropTypes.bool,
   size: PropTypes.string,
-  for: PropTypes.string,
+  htmlFor: PropTypes.string,
   tag: PropTypes.string,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -61,7 +62,7 @@ const Label = (props) => {
     tag: Tag,
     check,
     size,
-    for: htmlFor,
+    htmlFor,
     ...attributes
   } = props;
 

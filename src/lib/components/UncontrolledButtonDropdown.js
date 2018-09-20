@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ButtonDropdown from './ButtonDropdown';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   children: PropTypes.node,
 };
 

@@ -4,6 +4,7 @@ import Dropdown from './Dropdown';
 import { deprecated } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   dropup: deprecated(PropTypes.bool, 'Please use the prop "direction" with the value "up".'),
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),

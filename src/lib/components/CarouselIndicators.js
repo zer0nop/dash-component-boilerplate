@@ -30,6 +30,7 @@ const CarouselIndicators = (props) => {
 };
 
 CarouselIndicators.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   items: PropTypes.array.isRequired,
   activeIndex: PropTypes.number.isRequired,
   cssModule: PropTypes.object,

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { mapToCssModules, deprecated } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   light: PropTypes.bool,
   dark: PropTypes.bool,
   inverse: deprecated(PropTypes.bool, 'Please use the prop "dark"'),

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { mapToCssModules } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   'aria_label': PropTypes.string,
   className: PropTypes.string,

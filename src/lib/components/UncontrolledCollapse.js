@@ -4,6 +4,8 @@ import Collapse from './Collapse';
 import { findDOMElements, defaultToggleEvents, addMultipleEventListeners } from '../utils/utils';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  children: PropTypes.node,
   toggler: PropTypes.string.isRequired,
   toggleEvents: PropTypes.arrayOf(PropTypes.string)
 };

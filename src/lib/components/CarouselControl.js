@@ -37,6 +37,7 @@ const CarouselControl = (props) => {
 };
 
 CarouselControl.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   direction: PropTypes.oneOf(['prev', 'next']).isRequired,
   onClickHandler: PropTypes.func.isRequired,
   cssModule: PropTypes.object,

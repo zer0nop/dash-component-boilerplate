@@ -5,6 +5,7 @@ import { mapToCssModules } from '../utils/utils';
 import InputGroupText from './InputGroupText';
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   addonType: PropTypes.oneOf(['prepend', 'append']).isRequired,
   children: PropTypes.node,

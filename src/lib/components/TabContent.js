@@ -6,6 +6,7 @@ import { mapToCssModules, omit } from '../utils/utils';
 
 
 const propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   activeTab: PropTypes.any,
   className: PropTypes.string,
