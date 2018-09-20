@@ -9,6 +9,7 @@ class InputGroupButton(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - addonType (a value equal to: 'prepend', 'append'; required)
 - groupClassName (string; optional)
@@ -18,13 +19,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tag=Component.UNDEFINED, addonType=Component.REQUIRED, groupClassName=Component.UNDEFINED, groupAttributes=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tag', 'addonType', 'groupClassName', 'groupAttributes', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, addonType=Component.REQUIRED, groupClassName=Component.UNDEFINED, groupAttributes=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'addonType', 'groupClassName', 'groupAttributes', 'className', 'cssModule']
         self._type = 'InputGroupButton'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tag', 'addonType', 'groupClassName', 'groupAttributes', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'tag', 'addonType', 'groupClassName', 'groupAttributes', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

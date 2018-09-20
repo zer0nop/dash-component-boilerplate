@@ -8,6 +8,7 @@ class CarouselIndicators(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - items (list; required)
 - activeIndex (number; required)
 - cssModule (dict; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, items=Component.REQUIRED, activeIndex=Component.REQUIRED, cssModule=Component.UNDEFINED, onClickHandler=Component.REQUIRED, className=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['items', 'activeIndex', 'cssModule', 'className']
+    def __init__(self, id=Component.UNDEFINED, items=Component.REQUIRED, activeIndex=Component.REQUIRED, cssModule=Component.UNDEFINED, onClickHandler=Component.REQUIRED, className=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'items', 'activeIndex', 'cssModule', 'className']
         self._type = 'CarouselIndicators'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['items', 'activeIndex', 'cssModule', 'className']
+        self.available_properties = ['id', 'items', 'activeIndex', 'cssModule', 'className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

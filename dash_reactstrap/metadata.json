@@ -4,6 +4,21 @@
     "displayName": "Alert",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -140,6 +155,21 @@
     "displayName": "Badge",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "color": {
         "type": {
           "name": "string"
@@ -209,6 +239,21 @@
     "displayName": "Breadcrumb",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -293,6 +338,21 @@
     "displayName": "BreadcrumbItem",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -353,6 +413,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "active": {
         "type": {
           "name": "bool"
@@ -469,8 +544,31 @@
   "src/lib/components/ButtonDropdown.js": {
     "description": "",
     "displayName": "ButtonDropdown",
-    "methods": [],
+    "methods": [
+      {
+        "name": "toggle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -485,6 +583,21 @@
     "displayName": "ButtonGroup",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -557,6 +670,21 @@
     "displayName": "ButtonToolbar",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -615,6 +743,28 @@
     "displayName": "Card",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -709,6 +859,21 @@
     "displayName": "CardBlock",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -749,6 +914,28 @@
     "displayName": "CardBody",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -789,6 +976,21 @@
     "displayName": "CardColumns",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -829,6 +1031,21 @@
     "displayName": "CardDeck",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -869,6 +1086,21 @@
     "displayName": "CardFooter",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -909,6 +1141,21 @@
     "displayName": "CardGroup",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -949,6 +1196,21 @@
     "displayName": "CardHeader",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -989,6 +1251,21 @@
     "displayName": "CardImg",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1043,6 +1320,21 @@
     "displayName": "CardImgOverlay",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1083,6 +1375,21 @@
     "displayName": "CardLink",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1141,6 +1448,21 @@
     "displayName": "CardSubtitle",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1181,6 +1503,21 @@
     "displayName": "CardText",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1221,6 +1558,21 @@
     "displayName": "CardTitle",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1333,6 +1685,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "activeIndex": {
         "type": {
           "name": "number"
@@ -1482,6 +1849,21 @@
     "displayName": "CarouselCaption",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "captionHeader": {
         "type": {
           "name": "string"
@@ -1517,6 +1899,21 @@
     "displayName": "CarouselControl",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "direction": {
         "type": {
           "name": "enum",
@@ -1569,6 +1966,21 @@
     "displayName": "CarouselIndicators",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "items": {
         "type": {
           "name": "array"
@@ -1680,6 +2092,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1763,6 +2190,28 @@
     "displayName": "Col",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -1923,6 +2372,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "isOpen": {
         "type": {
           "name": "bool"
@@ -2048,6 +2512,28 @@
     "displayName": "Container",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -2274,6 +2760,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "disabled": {
         "type": {
           "name": "bool"
@@ -2451,55 +2952,11 @@
           "computed": false
         }
       }
-    },
-    "childContext": {
-      "toggle": {
-        "type": {
-          "name": "func"
-        },
-        "required": true
-      },
-      "isOpen": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      },
-      "direction": {
-        "type": {
-          "name": "enum",
-          "value": [
-            {
-              "value": "'up'",
-              "computed": false
-            },
-            {
-              "value": "'down'",
-              "computed": false
-            },
-            {
-              "value": "'left'",
-              "computed": false
-            },
-            {
-              "value": "'right'",
-              "computed": false
-            }
-          ]
-        },
-        "required": true
-      },
-      "inNavbar": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      }
     }
   },
   "src/lib/components/DropdownItem.js": {
     "description": "",
-    "displayName": "DropdownItem",
+    "displayName": "DropdownItemBase",
     "methods": [
       {
         "name": "onClick",
@@ -2522,6 +2979,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -2608,21 +3080,28 @@
           "computed": false
         }
       }
-    },
-    "context": {
-      "toggle": {
-        "type": {
-          "name": "func"
-        },
-        "required": false
-      }
     }
   },
   "src/lib/components/DropdownMenu.js": {
     "description": "",
-    "displayName": "DropdownMenu",
+    "displayName": "DropdownMenuBase",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -2687,49 +3166,11 @@
         "required": false,
         "description": ""
       }
-    },
-    "context": {
-      "isOpen": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      },
-      "direction": {
-        "type": {
-          "name": "enum",
-          "value": [
-            {
-              "value": "'up'",
-              "computed": false
-            },
-            {
-              "value": "'down'",
-              "computed": false
-            },
-            {
-              "value": "'left'",
-              "computed": false
-            },
-            {
-              "value": "'right'",
-              "computed": false
-            }
-          ]
-        },
-        "required": true
-      },
-      "inNavbar": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      }
     }
   },
   "src/lib/components/DropdownToggle.js": {
     "description": "",
-    "displayName": "DropdownToggle",
+    "displayName": "DropdownToggleBase",
     "methods": [
       {
         "name": "onClick",
@@ -2745,6 +3186,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "caret": {
         "type": {
           "name": "bool"
@@ -2838,26 +3294,6 @@
         "required": false,
         "description": ""
       }
-    },
-    "context": {
-      "isOpen": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      },
-      "toggle": {
-        "type": {
-          "name": "func"
-        },
-        "required": true
-      },
-      "inNavbar": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true
-      }
     }
   },
   "src/lib/components/ExampleComponent.react.js": {
@@ -2900,6 +3336,21 @@
     "displayName": "Fade",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "union",
@@ -3056,6 +3507,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3128,6 +3594,21 @@
     "displayName": "FormFeedback",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3185,6 +3666,21 @@
     "displayName": "FormGroup",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3252,6 +3748,21 @@
     "displayName": "FormText",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3337,6 +3848,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3459,6 +3985,20 @@
         },
         "required": false,
         "description": ""
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
       }
     }
   },
@@ -3467,6 +4007,21 @@
     "displayName": "InputGroup",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3514,6 +4069,21 @@
     "displayName": "InputGroupAddon",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3578,6 +4148,21 @@
     "displayName": "InputGroupButton",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3650,8 +4235,31 @@
   "src/lib/components/InputGroupButtonDropdown.js": {
     "description": "",
     "displayName": "InputGroupButtonDropdown",
-    "methods": [],
+    "methods": [
+      {
+        "name": "toggle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "addonType": {
         "type": {
           "name": "enum",
@@ -3683,6 +4291,21 @@
     "displayName": "InputGroupText",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3723,6 +4346,21 @@
     "displayName": "Jumbotron",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3770,6 +4408,21 @@
     "displayName": "Label",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -3798,7 +4451,7 @@
         "required": false,
         "description": ""
       },
-      "for": {
+      "htmlFor": {
         "type": {
           "name": "string"
         },
@@ -3888,6 +4541,21 @@
     "displayName": "ListGroup",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -3935,6 +4603,21 @@
     "displayName": "ListGroupItem",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4003,6 +4686,21 @@
     "displayName": "ListGroupItemHeading",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4043,6 +4741,21 @@
     "displayName": "ListGroupItemText",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4083,6 +4796,21 @@
     "displayName": "Media",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "body": {
         "type": {
           "name": "bool"
@@ -4308,6 +5036,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "isOpen": {
         "type": {
           "name": "bool"
@@ -4580,6 +5323,21 @@
     "displayName": "ModalBody",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4620,6 +5378,21 @@
     "displayName": "ModalFooter",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4660,6 +5433,21 @@
     "displayName": "ModalHeader",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -4770,6 +5558,21 @@
     "displayName": "Nav",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tabs": {
         "type": {
           "name": "bool"
@@ -4885,6 +5688,21 @@
     "displayName": "Navbar",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "light": {
         "type": {
           "name": "bool"
@@ -5016,6 +5834,21 @@
     "displayName": "NavbarBrand",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -5063,6 +5896,21 @@
     "displayName": "NavbarToggler",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -5119,8 +5967,31 @@
   "src/lib/components/NavDropdown.js": {
     "description": "",
     "displayName": "NavDropdown",
-    "methods": [],
+    "methods": [
+      {
+        "name": "toggle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "disabled": {
         "type": {
           "name": "bool"
@@ -5305,6 +6176,21 @@
     "displayName": "NavItem",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -5372,6 +6258,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -5465,6 +6366,21 @@
     "displayName": "Pagination",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -5556,6 +6472,21 @@
     "displayName": "PaginationItem",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "active": {
         "type": {
           "name": "bool"
@@ -5617,6 +6548,21 @@
     "displayName": "PaginationLink",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "aria_label": {
         "type": {
           "name": "string"
@@ -5783,6 +6729,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "placement": {
         "type": {
           "name": "enum",
@@ -5949,6 +6910,21 @@
     "displayName": "PopoverBody",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -5989,6 +6965,21 @@
     "displayName": "PopoverContent",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6029,6 +7020,21 @@
     "displayName": "PopoverHeader",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6069,6 +7075,21 @@
     "displayName": "PopoverTitle",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6183,6 +7204,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -6364,6 +7400,21 @@
     "displayName": "Portal",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -6385,6 +7436,21 @@
     "displayName": "Progress",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -6504,6 +7570,28 @@
     "displayName": "Row",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6570,6 +7658,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6625,6 +7728,21 @@
     "displayName": "Table",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "className": {
         "type": {
           "name": "string"
@@ -6749,6 +7867,21 @@
     "displayName": "TabPane",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "tag": {
         "type": {
           "name": "union",
@@ -6948,6 +8081,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "placement": {
         "type": {
           "name": "enum",
@@ -7165,6 +8313,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -7309,6 +8472,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "children": {
         "type": {
           "name": "node"
@@ -7364,6 +8542,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "items": {
         "type": {
           "name": "array"
@@ -7452,6 +8645,28 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
       "toggler": {
         "type": {
           "name": "string"
@@ -7493,6 +8708,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "disabled": {
         "type": {
           "name": "bool"
@@ -7677,6 +8907,21 @@
     "displayName": "UncontrolledNavDropdown",
     "methods": [],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "disabled": {
         "type": {
           "name": "bool"
@@ -7869,6 +9114,21 @@
       }
     ],
     "props": {
+      "id": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
       "placement": {
         "type": {
           "name": "enum",

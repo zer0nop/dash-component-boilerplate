@@ -9,6 +9,7 @@ class Navbar(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - light (boolean; optional)
 - dark (boolean; optional)
 - inverse (optional)
@@ -25,13 +26,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, light=Component.UNDEFINED, dark=Component.UNDEFINED, inverse=Component.UNDEFINED, full=Component.UNDEFINED, fixed=Component.UNDEFINED, sticky=Component.UNDEFINED, color=Component.UNDEFINED, role=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggleable=Component.UNDEFINED, expand=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'light', 'dark', 'inverse', 'full', 'fixed', 'sticky', 'color', 'role', 'tag', 'className', 'cssModule', 'toggleable', 'expand']
+    def __init__(self, children=None, id=Component.UNDEFINED, light=Component.UNDEFINED, dark=Component.UNDEFINED, inverse=Component.UNDEFINED, full=Component.UNDEFINED, fixed=Component.UNDEFINED, sticky=Component.UNDEFINED, color=Component.UNDEFINED, role=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggleable=Component.UNDEFINED, expand=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'light', 'dark', 'inverse', 'full', 'fixed', 'sticky', 'color', 'role', 'tag', 'className', 'cssModule', 'toggleable', 'expand']
         self._type = 'Navbar'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'light', 'dark', 'inverse', 'full', 'fixed', 'sticky', 'color', 'role', 'tag', 'className', 'cssModule', 'toggleable', 'expand']
+        self.available_properties = ['children', 'id', 'light', 'dark', 'inverse', 'full', 'fixed', 'sticky', 'color', 'role', 'tag', 'className', 'cssModule', 'toggleable', 'expand']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

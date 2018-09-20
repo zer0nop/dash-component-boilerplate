@@ -8,6 +8,7 @@ class ListGroup(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - flush (boolean; optional)
 - className (string; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, flush=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'flush', 'className', 'cssModule']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, flush=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'flush', 'className', 'cssModule']
         self._type = 'ListGroup'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'flush', 'className', 'cssModule']
+        self.available_properties = ['id', 'tag', 'flush', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

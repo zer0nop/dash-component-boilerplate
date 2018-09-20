@@ -9,6 +9,7 @@ class Modal(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - isOpen (boolean; optional)
 - autoFocus (boolean; optional)
 - centered (boolean; optional)
@@ -32,13 +33,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, isOpen=Component.UNDEFINED, autoFocus=Component.UNDEFINED, centered=Component.UNDEFINED, size=Component.UNDEFINED, toggle=Component.UNDEFINED, keyboard=Component.UNDEFINED, role=Component.UNDEFINED, labelledBy=Component.UNDEFINED, backdrop=Component.UNDEFINED, onEnter=Component.UNDEFINED, onExit=Component.UNDEFINED, onOpened=Component.UNDEFINED, onClosed=Component.UNDEFINED, className=Component.UNDEFINED, wrapClassName=Component.UNDEFINED, modalClassName=Component.UNDEFINED, backdropClassName=Component.UNDEFINED, contentClassName=Component.UNDEFINED, external=Component.UNDEFINED, fade=Component.UNDEFINED, cssModule=Component.UNDEFINED, zIndex=Component.UNDEFINED, backdropTransition=Component.UNDEFINED, modalTransition=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'isOpen', 'autoFocus', 'centered', 'size', 'keyboard', 'role', 'labelledBy', 'backdrop', 'className', 'wrapClassName', 'modalClassName', 'backdropClassName', 'contentClassName', 'external', 'fade', 'cssModule', 'zIndex', 'backdropTransition', 'modalTransition', 'innerRef']
+    def __init__(self, children=None, id=Component.UNDEFINED, isOpen=Component.UNDEFINED, autoFocus=Component.UNDEFINED, centered=Component.UNDEFINED, size=Component.UNDEFINED, toggle=Component.UNDEFINED, keyboard=Component.UNDEFINED, role=Component.UNDEFINED, labelledBy=Component.UNDEFINED, backdrop=Component.UNDEFINED, onEnter=Component.UNDEFINED, onExit=Component.UNDEFINED, onOpened=Component.UNDEFINED, onClosed=Component.UNDEFINED, className=Component.UNDEFINED, wrapClassName=Component.UNDEFINED, modalClassName=Component.UNDEFINED, backdropClassName=Component.UNDEFINED, contentClassName=Component.UNDEFINED, external=Component.UNDEFINED, fade=Component.UNDEFINED, cssModule=Component.UNDEFINED, zIndex=Component.UNDEFINED, backdropTransition=Component.UNDEFINED, modalTransition=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'isOpen', 'autoFocus', 'centered', 'size', 'keyboard', 'role', 'labelledBy', 'backdrop', 'className', 'wrapClassName', 'modalClassName', 'backdropClassName', 'contentClassName', 'external', 'fade', 'cssModule', 'zIndex', 'backdropTransition', 'modalTransition', 'innerRef']
         self._type = 'Modal'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'isOpen', 'autoFocus', 'centered', 'size', 'keyboard', 'role', 'labelledBy', 'backdrop', 'className', 'wrapClassName', 'modalClassName', 'backdropClassName', 'contentClassName', 'external', 'fade', 'cssModule', 'zIndex', 'backdropTransition', 'modalTransition', 'innerRef']
+        self.available_properties = ['children', 'id', 'isOpen', 'autoFocus', 'centered', 'size', 'keyboard', 'role', 'labelledBy', 'backdrop', 'className', 'wrapClassName', 'modalClassName', 'backdropClassName', 'contentClassName', 'external', 'fade', 'cssModule', 'zIndex', 'backdropTransition', 'modalTransition', 'innerRef']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

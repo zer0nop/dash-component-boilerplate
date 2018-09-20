@@ -9,10 +9,11 @@ class Label(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - hidden (boolean; optional)
 - check (boolean; optional)
 - size (string; optional)
-- for (string; optional)
+- htmlFor (string; optional)
 - tag (string; optional)
 - className (string; optional)
 - cssModule (dict; optional)
@@ -25,13 +26,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, hidden=Component.UNDEFINED, check=Component.UNDEFINED, size=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, xs=Component.UNDEFINED, sm=Component.UNDEFINED, md=Component.UNDEFINED, lg=Component.UNDEFINED, xl=Component.UNDEFINED, widths=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'hidden', 'check', 'size', 'for', 'tag', 'className', 'cssModule', 'xs', 'sm', 'md', 'lg', 'xl', 'widths']
+    def __init__(self, children=None, id=Component.UNDEFINED, hidden=Component.UNDEFINED, check=Component.UNDEFINED, size=Component.UNDEFINED, htmlFor=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, xs=Component.UNDEFINED, sm=Component.UNDEFINED, md=Component.UNDEFINED, lg=Component.UNDEFINED, xl=Component.UNDEFINED, widths=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'hidden', 'check', 'size', 'htmlFor', 'tag', 'className', 'cssModule', 'xs', 'sm', 'md', 'lg', 'xl', 'widths']
         self._type = 'Label'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'hidden', 'check', 'size', 'for', 'tag', 'className', 'cssModule', 'xs', 'sm', 'md', 'lg', 'xl', 'widths']
+        self.available_properties = ['children', 'id', 'hidden', 'check', 'size', 'htmlFor', 'tag', 'className', 'cssModule', 'xs', 'sm', 'md', 'lg', 'xl', 'widths']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

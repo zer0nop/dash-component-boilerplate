@@ -9,6 +9,7 @@ class UncontrolledNavDropdown(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - disabled (boolean; optional)
 - dropup (optional)
 - direction (a value equal to: 'up', 'down', 'left', 'right'; optional)
@@ -26,13 +27,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, disabled=Component.UNDEFINED, dropup=Component.UNDEFINED, direction=Component.UNDEFINED, group=Component.UNDEFINED, isOpen=Component.UNDEFINED, nav=Component.UNDEFINED, active=Component.UNDEFINED, addonType=Component.UNDEFINED, size=Component.UNDEFINED, tag=Component.UNDEFINED, toggle=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, inNavbar=Component.UNDEFINED, setActiveFromChild=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'disabled', 'dropup', 'direction', 'group', 'isOpen', 'nav', 'active', 'addonType', 'size', 'tag', 'className', 'cssModule', 'inNavbar', 'setActiveFromChild']
+    def __init__(self, children=None, id=Component.UNDEFINED, disabled=Component.UNDEFINED, dropup=Component.UNDEFINED, direction=Component.UNDEFINED, group=Component.UNDEFINED, isOpen=Component.UNDEFINED, nav=Component.UNDEFINED, active=Component.UNDEFINED, addonType=Component.UNDEFINED, size=Component.UNDEFINED, tag=Component.UNDEFINED, toggle=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, inNavbar=Component.UNDEFINED, setActiveFromChild=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'disabled', 'dropup', 'direction', 'group', 'isOpen', 'nav', 'active', 'addonType', 'size', 'tag', 'className', 'cssModule', 'inNavbar', 'setActiveFromChild']
         self._type = 'UncontrolledNavDropdown'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'disabled', 'dropup', 'direction', 'group', 'isOpen', 'nav', 'active', 'addonType', 'size', 'tag', 'className', 'cssModule', 'inNavbar', 'setActiveFromChild']
+        self.available_properties = ['children', 'id', 'disabled', 'dropup', 'direction', 'group', 'isOpen', 'nav', 'active', 'addonType', 'size', 'tag', 'className', 'cssModule', 'inNavbar', 'setActiveFromChild']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

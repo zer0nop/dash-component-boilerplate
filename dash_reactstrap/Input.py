@@ -9,6 +9,7 @@ class Input(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - type (string; optional)
 - size (string; optional)
 - bsSize (string; optional)
@@ -22,16 +23,18 @@ Keyword arguments:
 - addon (boolean; optional)
 - className (string; optional)
 - cssModule (dict; optional)
+- name (string; optional)
+- placeholder (string; optional)
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, type=Component.UNDEFINED, size=Component.UNDEFINED, bsSize=Component.UNDEFINED, state=Component.UNDEFINED, valid=Component.UNDEFINED, invalid=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, static=Component.UNDEFINED, plaintext=Component.UNDEFINED, addon=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'type', 'size', 'bsSize', 'state', 'valid', 'invalid', 'tag', 'innerRef', 'static', 'plaintext', 'addon', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, type=Component.UNDEFINED, size=Component.UNDEFINED, bsSize=Component.UNDEFINED, state=Component.UNDEFINED, valid=Component.UNDEFINED, invalid=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, static=Component.UNDEFINED, plaintext=Component.UNDEFINED, addon=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, name=Component.UNDEFINED, placeholder=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'type', 'size', 'bsSize', 'state', 'valid', 'invalid', 'tag', 'innerRef', 'static', 'plaintext', 'addon', 'className', 'cssModule', 'name', 'placeholder']
         self._type = 'Input'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'type', 'size', 'bsSize', 'state', 'valid', 'invalid', 'tag', 'innerRef', 'static', 'plaintext', 'addon', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'type', 'size', 'bsSize', 'state', 'valid', 'invalid', 'tag', 'innerRef', 'static', 'plaintext', 'addon', 'className', 'cssModule', 'name', 'placeholder']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

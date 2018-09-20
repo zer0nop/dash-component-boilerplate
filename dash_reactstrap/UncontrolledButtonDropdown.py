@@ -9,16 +9,17 @@ class UncontrolledButtonDropdown(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, **kwargs):
-        self._prop_names = ['children']
+    def __init__(self, children=None, id=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id']
         self._type = 'UncontrolledButtonDropdown'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children']
+        self.available_properties = ['children', 'id']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

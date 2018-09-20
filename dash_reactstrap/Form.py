@@ -9,6 +9,7 @@ class Form(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - inline (boolean; optional)
 - tag (string; optional)
 - innerRef (dict | string; optional)
@@ -17,13 +18,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, inline=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'inline', 'tag', 'innerRef', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, inline=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'inline', 'tag', 'innerRef', 'className', 'cssModule']
         self._type = 'Form'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'inline', 'tag', 'innerRef', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'inline', 'tag', 'innerRef', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

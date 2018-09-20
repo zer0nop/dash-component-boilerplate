@@ -9,6 +9,7 @@ class Progress(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - bar (boolean; optional)
 - multi (boolean; optional)
 - tag (string; optional)
@@ -23,13 +24,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, bar=Component.UNDEFINED, multi=Component.UNDEFINED, tag=Component.UNDEFINED, value=Component.UNDEFINED, max=Component.UNDEFINED, animated=Component.UNDEFINED, striped=Component.UNDEFINED, color=Component.UNDEFINED, className=Component.UNDEFINED, barClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'bar', 'multi', 'tag', 'value', 'max', 'animated', 'striped', 'color', 'className', 'barClassName', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, bar=Component.UNDEFINED, multi=Component.UNDEFINED, tag=Component.UNDEFINED, value=Component.UNDEFINED, max=Component.UNDEFINED, animated=Component.UNDEFINED, striped=Component.UNDEFINED, color=Component.UNDEFINED, className=Component.UNDEFINED, barClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'bar', 'multi', 'tag', 'value', 'max', 'animated', 'striped', 'color', 'className', 'barClassName', 'cssModule']
         self._type = 'Progress'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'bar', 'multi', 'tag', 'value', 'max', 'animated', 'striped', 'color', 'className', 'barClassName', 'cssModule']
+        self.available_properties = ['children', 'id', 'bar', 'multi', 'tag', 'value', 'max', 'animated', 'striped', 'color', 'className', 'barClassName', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

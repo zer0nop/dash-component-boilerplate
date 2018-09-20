@@ -9,6 +9,7 @@ class Carousel(Component):
 
 Keyword arguments:
 - children (list; optional)
+- id (string | number; optional)
 - activeIndex (number; optional)
 - keyboard (boolean; optional)
 - pause (a value equal to: 'hover', false; optional)
@@ -20,13 +21,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, activeIndex=Component.UNDEFINED, next=Component.REQUIRED, previous=Component.REQUIRED, keyboard=Component.UNDEFINED, pause=Component.UNDEFINED, ride=Component.UNDEFINED, interval=Component.UNDEFINED, mouseEnter=Component.UNDEFINED, mouseLeave=Component.UNDEFINED, slide=Component.UNDEFINED, cssModule=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'activeIndex', 'keyboard', 'pause', 'ride', 'interval', 'slide', 'cssModule', 'className']
+    def __init__(self, children=None, id=Component.UNDEFINED, activeIndex=Component.UNDEFINED, next=Component.REQUIRED, previous=Component.REQUIRED, keyboard=Component.UNDEFINED, pause=Component.UNDEFINED, ride=Component.UNDEFINED, interval=Component.UNDEFINED, mouseEnter=Component.UNDEFINED, mouseLeave=Component.UNDEFINED, slide=Component.UNDEFINED, cssModule=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'activeIndex', 'keyboard', 'pause', 'ride', 'interval', 'slide', 'cssModule', 'className']
         self._type = 'Carousel'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'activeIndex', 'keyboard', 'pause', 'ride', 'interval', 'slide', 'cssModule', 'className']
+        self.available_properties = ['children', 'id', 'activeIndex', 'keyboard', 'pause', 'ride', 'interval', 'slide', 'cssModule', 'className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -8,6 +8,8 @@ class Card(Component):
 
 
 Keyword arguments:
+- children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - inverse (boolean; optional)
 - color (string; optional)
@@ -20,13 +22,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, inverse=Component.UNDEFINED, color=Component.UNDEFINED, block=Component.UNDEFINED, body=Component.UNDEFINED, outline=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'inverse', 'color', 'block', 'body', 'outline', 'className', 'cssModule', 'innerRef']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, inverse=Component.UNDEFINED, color=Component.UNDEFINED, block=Component.UNDEFINED, body=Component.UNDEFINED, outline=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'inverse', 'color', 'block', 'body', 'outline', 'className', 'cssModule', 'innerRef']
         self._type = 'Card'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'inverse', 'color', 'block', 'body', 'outline', 'className', 'cssModule', 'innerRef']
+        self.available_properties = ['children', 'id', 'tag', 'inverse', 'color', 'block', 'body', 'outline', 'className', 'cssModule', 'innerRef']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
@@ -38,7 +40,7 @@ Available events: """
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(Card, self).__init__(**args)
+        super(Card, self).__init__(children=children, **args)
 
     def __repr__(self):
         if(any(getattr(self, c, None) is not None

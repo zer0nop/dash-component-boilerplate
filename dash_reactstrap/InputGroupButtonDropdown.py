@@ -9,17 +9,18 @@ class InputGroupButtonDropdown(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - addonType (a value equal to: 'prepend', 'append'; required)
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, addonType=Component.REQUIRED, **kwargs):
-        self._prop_names = ['children', 'addonType']
+    def __init__(self, children=None, id=Component.UNDEFINED, addonType=Component.REQUIRED, **kwargs):
+        self._prop_names = ['children', 'id', 'addonType']
         self._type = 'InputGroupButtonDropdown'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'addonType']
+        self.available_properties = ['children', 'id', 'addonType']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -9,6 +9,7 @@ class Pagination(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - className (string; optional)
 - listClassName (string; optional)
 - cssModule (dict; optional)
@@ -19,13 +20,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, className=Component.UNDEFINED, listClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, size=Component.UNDEFINED, tag=Component.UNDEFINED, listTag=Component.UNDEFINED, aria_label=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'className', 'listClassName', 'cssModule', 'size', 'tag', 'listTag', 'aria_label']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, listClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, size=Component.UNDEFINED, tag=Component.UNDEFINED, listTag=Component.UNDEFINED, aria_label=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'listClassName', 'cssModule', 'size', 'tag', 'listTag', 'aria_label']
         self._type = 'Pagination'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'className', 'listClassName', 'cssModule', 'size', 'tag', 'listTag', 'aria_label']
+        self.available_properties = ['children', 'id', 'className', 'listClassName', 'cssModule', 'size', 'tag', 'listTag', 'aria_label']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

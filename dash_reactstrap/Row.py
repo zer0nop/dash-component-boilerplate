@@ -8,6 +8,8 @@ class Row(Component):
 
 
 Keyword arguments:
+- children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - noGutters (boolean; optional)
 - className (string; optional)
@@ -15,13 +17,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, noGutters=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'noGutters', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, noGutters=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'noGutters', 'className', 'cssModule']
         self._type = 'Row'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'noGutters', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'tag', 'noGutters', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
@@ -33,7 +35,7 @@ Available events: """
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(Row, self).__init__(**args)
+        super(Row, self).__init__(children=children, **args)
 
     def __repr__(self):
         if(any(getattr(self, c, None) is not None

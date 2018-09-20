@@ -9,6 +9,7 @@ class PaginationLink(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - aria_label (string; optional)
 - className (string; optional)
 - cssModule (dict; optional)
@@ -18,13 +19,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, aria_label=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, next=Component.UNDEFINED, previous=Component.UNDEFINED, tag=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'aria_label', 'className', 'cssModule', 'next', 'previous', 'tag']
+    def __init__(self, children=None, id=Component.UNDEFINED, aria_label=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, next=Component.UNDEFINED, previous=Component.UNDEFINED, tag=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'aria_label', 'className', 'cssModule', 'next', 'previous', 'tag']
         self._type = 'PaginationLink'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'aria_label', 'className', 'cssModule', 'next', 'previous', 'tag']
+        self.available_properties = ['children', 'id', 'aria_label', 'className', 'cssModule', 'next', 'previous', 'tag']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

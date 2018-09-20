@@ -9,6 +9,7 @@ class Alert(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - className (string; optional)
 - closeClassName (string; optional)
 - closeAriaLabel (string; optional)
@@ -22,13 +23,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, className=Component.UNDEFINED, closeClassName=Component.UNDEFINED, closeAriaLabel=Component.UNDEFINED, cssModule=Component.UNDEFINED, color=Component.UNDEFINED, fade=Component.UNDEFINED, isOpen=Component.UNDEFINED, toggle=Component.UNDEFINED, tag=Component.UNDEFINED, transition=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'className', 'closeClassName', 'closeAriaLabel', 'cssModule', 'color', 'fade', 'isOpen', 'tag', 'transition', 'innerRef']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, closeClassName=Component.UNDEFINED, closeAriaLabel=Component.UNDEFINED, cssModule=Component.UNDEFINED, color=Component.UNDEFINED, fade=Component.UNDEFINED, isOpen=Component.UNDEFINED, toggle=Component.UNDEFINED, tag=Component.UNDEFINED, transition=Component.UNDEFINED, innerRef=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'closeClassName', 'closeAriaLabel', 'cssModule', 'color', 'fade', 'isOpen', 'tag', 'transition', 'innerRef']
         self._type = 'Alert'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'className', 'closeClassName', 'closeAriaLabel', 'cssModule', 'color', 'fade', 'isOpen', 'tag', 'transition', 'innerRef']
+        self.available_properties = ['children', 'id', 'className', 'closeClassName', 'closeAriaLabel', 'cssModule', 'color', 'fade', 'isOpen', 'tag', 'transition', 'innerRef']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

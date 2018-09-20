@@ -8,6 +8,7 @@ class Jumbotron(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - fluid (boolean; optional)
 - className (string; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, fluid=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'fluid', 'className', 'cssModule']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, fluid=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'fluid', 'className', 'cssModule']
         self._type = 'Jumbotron'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'fluid', 'className', 'cssModule']
+        self.available_properties = ['id', 'tag', 'fluid', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

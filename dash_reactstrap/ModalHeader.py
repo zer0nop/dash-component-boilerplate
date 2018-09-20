@@ -9,6 +9,7 @@ class ModalHeader(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - wrapTag (string; optional)
 - className (string; optional)
@@ -19,13 +20,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tag=Component.UNDEFINED, wrapTag=Component.UNDEFINED, toggle=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, closeAriaLabel=Component.UNDEFINED, charCode=Component.UNDEFINED, close=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tag', 'wrapTag', 'className', 'cssModule', 'closeAriaLabel', 'charCode', 'close']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, wrapTag=Component.UNDEFINED, toggle=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, closeAriaLabel=Component.UNDEFINED, charCode=Component.UNDEFINED, close=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'wrapTag', 'className', 'cssModule', 'closeAriaLabel', 'charCode', 'close']
         self._type = 'ModalHeader'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tag', 'wrapTag', 'className', 'cssModule', 'closeAriaLabel', 'charCode', 'close']
+        self.available_properties = ['children', 'id', 'tag', 'wrapTag', 'className', 'cssModule', 'closeAriaLabel', 'charCode', 'close']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

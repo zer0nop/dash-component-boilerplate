@@ -8,6 +8,7 @@ class TabPane(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - className (string; optional)
 - cssModule (dict; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, tabId=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'className', 'cssModule', 'tabId']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, tabId=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'className', 'cssModule', 'tabId']
         self._type = 'TabPane'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'className', 'cssModule', 'tabId']
+        self.available_properties = ['id', 'tag', 'className', 'cssModule', 'tabId']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

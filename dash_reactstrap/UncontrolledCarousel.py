@@ -8,6 +8,7 @@ class UncontrolledCarousel(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - items (list; required)
 - indicators (boolean; optional)
 - controls (boolean; optional)
@@ -16,13 +17,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, items=Component.REQUIRED, indicators=Component.UNDEFINED, controls=Component.UNDEFINED, autoPlay=Component.UNDEFINED, activeIndex=Component.UNDEFINED, next=Component.UNDEFINED, previous=Component.UNDEFINED, goToIndex=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['items', 'indicators', 'controls', 'autoPlay', 'activeIndex']
+    def __init__(self, id=Component.UNDEFINED, items=Component.REQUIRED, indicators=Component.UNDEFINED, controls=Component.UNDEFINED, autoPlay=Component.UNDEFINED, activeIndex=Component.UNDEFINED, next=Component.UNDEFINED, previous=Component.UNDEFINED, goToIndex=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'items', 'indicators', 'controls', 'autoPlay', 'activeIndex']
         self._type = 'UncontrolledCarousel'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['items', 'indicators', 'controls', 'autoPlay', 'activeIndex']
+        self.available_properties = ['id', 'items', 'indicators', 'controls', 'autoPlay', 'activeIndex']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

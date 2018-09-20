@@ -8,6 +8,7 @@ class Table(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - className (string; optional)
 - cssModule (dict; optional)
 - size (string; optional)
@@ -23,13 +24,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, size=Component.UNDEFINED, bordered=Component.UNDEFINED, borderless=Component.UNDEFINED, striped=Component.UNDEFINED, inverse=Component.UNDEFINED, dark=Component.UNDEFINED, hover=Component.UNDEFINED, responsive=Component.UNDEFINED, tag=Component.UNDEFINED, responsiveTag=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['className', 'cssModule', 'size', 'bordered', 'borderless', 'striped', 'inverse', 'dark', 'hover', 'responsive', 'tag', 'responsiveTag']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, size=Component.UNDEFINED, bordered=Component.UNDEFINED, borderless=Component.UNDEFINED, striped=Component.UNDEFINED, inverse=Component.UNDEFINED, dark=Component.UNDEFINED, hover=Component.UNDEFINED, responsive=Component.UNDEFINED, tag=Component.UNDEFINED, responsiveTag=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'cssModule', 'size', 'bordered', 'borderless', 'striped', 'inverse', 'dark', 'hover', 'responsive', 'tag', 'responsiveTag']
         self._type = 'Table'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['className', 'cssModule', 'size', 'bordered', 'borderless', 'striped', 'inverse', 'dark', 'hover', 'responsive', 'tag', 'responsiveTag']
+        self.available_properties = ['id', 'className', 'cssModule', 'size', 'bordered', 'borderless', 'striped', 'inverse', 'dark', 'hover', 'responsive', 'tag', 'responsiveTag']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

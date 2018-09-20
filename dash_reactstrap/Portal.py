@@ -9,17 +9,18 @@ class Portal(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - node (boolean | number | string | dict | list; optional)
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, node=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'node']
+    def __init__(self, children=None, id=Component.UNDEFINED, node=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'node']
         self._type = 'Portal'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'node']
+        self.available_properties = ['children', 'id', 'node']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

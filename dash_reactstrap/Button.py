@@ -9,6 +9,7 @@ class Button(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - active (boolean; optional)
 - block (boolean; optional)
 - color (string; optional)
@@ -22,13 +23,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, active=Component.UNDEFINED, block=Component.UNDEFINED, color=Component.UNDEFINED, disabled=Component.UNDEFINED, outline=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, onClick=Component.UNDEFINED, size=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'active', 'block', 'color', 'disabled', 'outline', 'tag', 'innerRef', 'size', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, block=Component.UNDEFINED, color=Component.UNDEFINED, disabled=Component.UNDEFINED, outline=Component.UNDEFINED, tag=Component.UNDEFINED, innerRef=Component.UNDEFINED, onClick=Component.UNDEFINED, size=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'active', 'block', 'color', 'disabled', 'outline', 'tag', 'innerRef', 'size', 'className', 'cssModule']
         self._type = 'Button'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'active', 'block', 'color', 'disabled', 'outline', 'tag', 'innerRef', 'size', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'active', 'block', 'color', 'disabled', 'outline', 'tag', 'innerRef', 'size', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -8,6 +8,7 @@ class CarouselCaption(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - captionHeader (string; optional)
 - captionText (string; required)
 - cssModule (dict; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, captionHeader=Component.UNDEFINED, captionText=Component.REQUIRED, cssModule=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['captionHeader', 'captionText', 'cssModule', 'className']
+    def __init__(self, id=Component.UNDEFINED, captionHeader=Component.UNDEFINED, captionText=Component.REQUIRED, cssModule=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'captionHeader', 'captionText', 'cssModule', 'className']
         self._type = 'CarouselCaption'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['captionHeader', 'captionText', 'cssModule', 'className']
+        self.available_properties = ['id', 'captionHeader', 'captionText', 'cssModule', 'className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -9,6 +9,7 @@ class Media(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - body (boolean; optional)
 - bottom (boolean; optional)
 - className (string; optional)
@@ -24,13 +25,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, body=Component.UNDEFINED, bottom=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, heading=Component.UNDEFINED, left=Component.UNDEFINED, list=Component.UNDEFINED, middle=Component.UNDEFINED, object=Component.UNDEFINED, right=Component.UNDEFINED, tag=Component.UNDEFINED, top=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'body', 'bottom', 'className', 'cssModule', 'heading', 'left', 'list', 'middle', 'object', 'right', 'tag', 'top']
+    def __init__(self, children=None, id=Component.UNDEFINED, body=Component.UNDEFINED, bottom=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, heading=Component.UNDEFINED, left=Component.UNDEFINED, list=Component.UNDEFINED, middle=Component.UNDEFINED, object=Component.UNDEFINED, right=Component.UNDEFINED, tag=Component.UNDEFINED, top=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'body', 'bottom', 'className', 'cssModule', 'heading', 'left', 'list', 'middle', 'object', 'right', 'tag', 'top']
         self._type = 'Media'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'body', 'bottom', 'className', 'cssModule', 'heading', 'left', 'list', 'middle', 'object', 'right', 'tag', 'top']
+        self.available_properties = ['children', 'id', 'body', 'bottom', 'className', 'cssModule', 'heading', 'left', 'list', 'middle', 'object', 'right', 'tag', 'top']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

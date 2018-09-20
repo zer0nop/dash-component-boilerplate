@@ -9,6 +9,7 @@ class Collapse(Component):
 
 Keyword arguments:
 - children (list | a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - isOpen (boolean; optional)
 - tag (string; optional)
 - className (a list of or a singular dash component, string or number; optional)
@@ -18,13 +19,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, isOpen=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, navbar=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, appear=Component.UNDEFINED, enter=Component.UNDEFINED, exit=Component.UNDEFINED, timeout=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'isOpen', 'tag', 'className', 'navbar', 'cssModule', 'innerRef']
+    def __init__(self, children=None, id=Component.UNDEFINED, isOpen=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, navbar=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, appear=Component.UNDEFINED, enter=Component.UNDEFINED, exit=Component.UNDEFINED, timeout=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'isOpen', 'tag', 'className', 'navbar', 'cssModule', 'innerRef']
         self._type = 'Collapse'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'isOpen', 'tag', 'className', 'navbar', 'cssModule', 'innerRef']
+        self.available_properties = ['children', 'id', 'isOpen', 'tag', 'className', 'navbar', 'cssModule', 'innerRef']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

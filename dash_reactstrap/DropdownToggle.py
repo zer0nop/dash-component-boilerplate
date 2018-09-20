@@ -9,6 +9,7 @@ class DropdownToggle(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - caret (boolean; optional)
 - color (string; optional)
 - className (string; optional)
@@ -21,13 +22,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, caret=Component.UNDEFINED, color=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, disabled=Component.UNDEFINED, onClick=Component.UNDEFINED, aria_haspopup=Component.UNDEFINED, split=Component.UNDEFINED, tag=Component.UNDEFINED, nav=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'caret', 'color', 'className', 'cssModule', 'disabled', 'aria_haspopup', 'split', 'tag', 'nav']
+    def __init__(self, children=None, id=Component.UNDEFINED, caret=Component.UNDEFINED, color=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, disabled=Component.UNDEFINED, onClick=Component.UNDEFINED, aria_haspopup=Component.UNDEFINED, split=Component.UNDEFINED, tag=Component.UNDEFINED, nav=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'caret', 'color', 'className', 'cssModule', 'disabled', 'aria_haspopup', 'split', 'tag', 'nav']
         self._type = 'DropdownToggle'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'caret', 'color', 'className', 'cssModule', 'disabled', 'aria_haspopup', 'split', 'tag', 'nav']
+        self.available_properties = ['children', 'id', 'caret', 'color', 'className', 'cssModule', 'disabled', 'aria_haspopup', 'split', 'tag', 'nav']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

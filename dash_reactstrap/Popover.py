@@ -8,6 +8,7 @@ class Popover(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - placement (optional)
 - target (optional)
 - container (optional)
@@ -28,13 +29,13 @@ Those keys have the following types:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, placement=Component.UNDEFINED, target=Component.UNDEFINED, container=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, isOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, hideArrow=Component.UNDEFINED, className=Component.UNDEFINED, innerClassName=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggle=Component.UNDEFINED, delay=Component.UNDEFINED, modifiers=Component.UNDEFINED, offset=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['placement', 'target', 'container', 'boundariesElement', 'isOpen', 'disabled', 'hideArrow', 'className', 'innerClassName', 'placementPrefix', 'cssModule', 'delay', 'modifiers', 'offset']
+    def __init__(self, id=Component.UNDEFINED, placement=Component.UNDEFINED, target=Component.UNDEFINED, container=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, isOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, hideArrow=Component.UNDEFINED, className=Component.UNDEFINED, innerClassName=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggle=Component.UNDEFINED, delay=Component.UNDEFINED, modifiers=Component.UNDEFINED, offset=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'placement', 'target', 'container', 'boundariesElement', 'isOpen', 'disabled', 'hideArrow', 'className', 'innerClassName', 'placementPrefix', 'cssModule', 'delay', 'modifiers', 'offset']
         self._type = 'Popover'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['placement', 'target', 'container', 'boundariesElement', 'isOpen', 'disabled', 'hideArrow', 'className', 'innerClassName', 'placementPrefix', 'cssModule', 'delay', 'modifiers', 'offset']
+        self.available_properties = ['id', 'placement', 'target', 'container', 'boundariesElement', 'isOpen', 'disabled', 'hideArrow', 'className', 'innerClassName', 'placementPrefix', 'cssModule', 'delay', 'modifiers', 'offset']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

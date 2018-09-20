@@ -9,6 +9,7 @@ class DropdownMenu(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - right (boolean; optional)
 - flip (boolean; optional)
@@ -19,13 +20,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tag=Component.UNDEFINED, right=Component.UNDEFINED, flip=Component.UNDEFINED, modifiers=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, persist=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tag', 'right', 'flip', 'modifiers', 'className', 'cssModule', 'persist']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, right=Component.UNDEFINED, flip=Component.UNDEFINED, modifiers=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, persist=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'right', 'flip', 'modifiers', 'className', 'cssModule', 'persist']
         self._type = 'DropdownMenu'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tag', 'right', 'flip', 'modifiers', 'className', 'cssModule', 'persist']
+        self.available_properties = ['children', 'id', 'tag', 'right', 'flip', 'modifiers', 'className', 'cssModule', 'persist']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

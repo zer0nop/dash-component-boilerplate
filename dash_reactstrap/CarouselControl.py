@@ -8,6 +8,7 @@ class CarouselControl(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - direction (a value equal to: 'prev', 'next'; required)
 - cssModule (dict; optional)
 - directionText (string; optional)
@@ -15,13 +16,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, direction=Component.REQUIRED, onClickHandler=Component.REQUIRED, cssModule=Component.UNDEFINED, directionText=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['direction', 'cssModule', 'directionText', 'className']
+    def __init__(self, id=Component.UNDEFINED, direction=Component.REQUIRED, onClickHandler=Component.REQUIRED, cssModule=Component.UNDEFINED, directionText=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'direction', 'cssModule', 'directionText', 'className']
         self._type = 'CarouselControl'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['direction', 'cssModule', 'directionText', 'className']
+        self.available_properties = ['id', 'direction', 'cssModule', 'directionText', 'className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

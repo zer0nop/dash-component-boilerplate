@@ -8,6 +8,7 @@ class Tooltip(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - placement (optional)
 - target (optional)
 - container (optional)
@@ -32,13 +33,13 @@ Those keys have the following types:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, placement=Component.UNDEFINED, target=Component.UNDEFINED, container=Component.UNDEFINED, isOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, hideArrow=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, className=Component.UNDEFINED, innerClassName=Component.UNDEFINED, arrowClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggle=Component.UNDEFINED, autohide=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, delay=Component.UNDEFINED, modifiers=Component.UNDEFINED, offset=Component.UNDEFINED, innerRef=Component.UNDEFINED, trigger=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['placement', 'target', 'container', 'isOpen', 'disabled', 'hideArrow', 'boundariesElement', 'className', 'innerClassName', 'arrowClassName', 'cssModule', 'autohide', 'placementPrefix', 'delay', 'modifiers', 'offset', 'innerRef', 'trigger']
+    def __init__(self, id=Component.UNDEFINED, placement=Component.UNDEFINED, target=Component.UNDEFINED, container=Component.UNDEFINED, isOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, hideArrow=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, className=Component.UNDEFINED, innerClassName=Component.UNDEFINED, arrowClassName=Component.UNDEFINED, cssModule=Component.UNDEFINED, toggle=Component.UNDEFINED, autohide=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, delay=Component.UNDEFINED, modifiers=Component.UNDEFINED, offset=Component.UNDEFINED, innerRef=Component.UNDEFINED, trigger=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'placement', 'target', 'container', 'isOpen', 'disabled', 'hideArrow', 'boundariesElement', 'className', 'innerClassName', 'arrowClassName', 'cssModule', 'autohide', 'placementPrefix', 'delay', 'modifiers', 'offset', 'innerRef', 'trigger']
         self._type = 'Tooltip'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['placement', 'target', 'container', 'isOpen', 'disabled', 'hideArrow', 'boundariesElement', 'className', 'innerClassName', 'arrowClassName', 'cssModule', 'autohide', 'placementPrefix', 'delay', 'modifiers', 'offset', 'innerRef', 'trigger']
+        self.available_properties = ['id', 'placement', 'target', 'container', 'isOpen', 'disabled', 'hideArrow', 'boundariesElement', 'className', 'innerClassName', 'arrowClassName', 'cssModule', 'autohide', 'placementPrefix', 'delay', 'modifiers', 'offset', 'innerRef', 'trigger']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

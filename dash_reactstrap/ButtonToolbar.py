@@ -8,6 +8,7 @@ class ButtonToolbar(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - aria_label (string; optional)
 - className (string; optional)
@@ -16,13 +17,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, aria_label=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, role=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'aria_label', 'className', 'cssModule', 'role']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, aria_label=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, role=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'aria_label', 'className', 'cssModule', 'role']
         self._type = 'ButtonToolbar'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'aria_label', 'className', 'cssModule', 'role']
+        self.available_properties = ['id', 'tag', 'aria_label', 'className', 'cssModule', 'role']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

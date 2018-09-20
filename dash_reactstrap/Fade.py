@@ -9,6 +9,7 @@ class Fade(Component):
 
 Keyword arguments:
 - children (list | a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - baseClass (string; optional)
 - baseClassActive (string; optional)
@@ -18,13 +19,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tag=Component.UNDEFINED, baseClass=Component.UNDEFINED, baseClassActive=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, timeout=Component.UNDEFINED, appear=Component.UNDEFINED, enter=Component.UNDEFINED, exit=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tag', 'baseClass', 'baseClassActive', 'className', 'cssModule', 'innerRef']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, baseClass=Component.UNDEFINED, baseClassActive=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, innerRef=Component.UNDEFINED, timeout=Component.UNDEFINED, appear=Component.UNDEFINED, enter=Component.UNDEFINED, exit=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'baseClass', 'baseClassActive', 'className', 'cssModule', 'innerRef']
         self._type = 'Fade'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tag', 'baseClass', 'baseClassActive', 'className', 'cssModule', 'innerRef']
+        self.available_properties = ['children', 'id', 'tag', 'baseClass', 'baseClassActive', 'className', 'cssModule', 'innerRef']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -8,6 +8,7 @@ class ListGroupItem(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - active (boolean; optional)
 - disabled (boolean; optional)
@@ -18,13 +19,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, active=Component.UNDEFINED, disabled=Component.UNDEFINED, color=Component.UNDEFINED, action=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'active', 'disabled', 'color', 'action', 'className', 'cssModule']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, active=Component.UNDEFINED, disabled=Component.UNDEFINED, color=Component.UNDEFINED, action=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'active', 'disabled', 'color', 'action', 'className', 'cssModule']
         self._type = 'ListGroupItem'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'active', 'disabled', 'color', 'action', 'className', 'cssModule']
+        self.available_properties = ['id', 'tag', 'active', 'disabled', 'color', 'action', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

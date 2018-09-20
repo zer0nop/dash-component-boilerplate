@@ -9,6 +9,7 @@ class Nav(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tabs (boolean; optional)
 - pills (boolean; optional)
 - vertical (boolean | string; optional)
@@ -23,13 +24,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tabs=Component.UNDEFINED, pills=Component.UNDEFINED, vertical=Component.UNDEFINED, horizontal=Component.UNDEFINED, justified=Component.UNDEFINED, fill=Component.UNDEFINED, navbar=Component.UNDEFINED, card=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tabs', 'pills', 'vertical', 'horizontal', 'justified', 'fill', 'navbar', 'card', 'tag', 'className', 'cssModule']
+    def __init__(self, children=None, id=Component.UNDEFINED, tabs=Component.UNDEFINED, pills=Component.UNDEFINED, vertical=Component.UNDEFINED, horizontal=Component.UNDEFINED, justified=Component.UNDEFINED, fill=Component.UNDEFINED, navbar=Component.UNDEFINED, card=Component.UNDEFINED, tag=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tabs', 'pills', 'vertical', 'horizontal', 'justified', 'fill', 'navbar', 'card', 'tag', 'className', 'cssModule']
         self._type = 'Nav'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tabs', 'pills', 'vertical', 'horizontal', 'justified', 'fill', 'navbar', 'card', 'tag', 'className', 'cssModule']
+        self.available_properties = ['children', 'id', 'tabs', 'pills', 'vertical', 'horizontal', 'justified', 'fill', 'navbar', 'card', 'tag', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

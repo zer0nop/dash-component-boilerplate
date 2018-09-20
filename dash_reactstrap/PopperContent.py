@@ -9,6 +9,7 @@ class PopperContent(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - className (string; optional)
 - placement (string; optional)
 - placementPrefix (string; optional)
@@ -27,13 +28,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, className=Component.UNDEFINED, placement=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, arrowClassName=Component.UNDEFINED, hideArrow=Component.UNDEFINED, tag=Component.UNDEFINED, isOpen=Component.UNDEFINED, cssModule=Component.UNDEFINED, offset=Component.UNDEFINED, fallbackPlacement=Component.UNDEFINED, flip=Component.UNDEFINED, container=Component.UNDEFINED, target=Component.UNDEFINED, modifiers=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'className', 'placement', 'placementPrefix', 'arrowClassName', 'hideArrow', 'tag', 'isOpen', 'cssModule', 'offset', 'fallbackPlacement', 'flip', 'container', 'target', 'modifiers', 'boundariesElement']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, placement=Component.UNDEFINED, placementPrefix=Component.UNDEFINED, arrowClassName=Component.UNDEFINED, hideArrow=Component.UNDEFINED, tag=Component.UNDEFINED, isOpen=Component.UNDEFINED, cssModule=Component.UNDEFINED, offset=Component.UNDEFINED, fallbackPlacement=Component.UNDEFINED, flip=Component.UNDEFINED, container=Component.UNDEFINED, target=Component.UNDEFINED, modifiers=Component.UNDEFINED, boundariesElement=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'placement', 'placementPrefix', 'arrowClassName', 'hideArrow', 'tag', 'isOpen', 'cssModule', 'offset', 'fallbackPlacement', 'flip', 'container', 'target', 'modifiers', 'boundariesElement']
         self._type = 'PopperContent'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'className', 'placement', 'placementPrefix', 'arrowClassName', 'hideArrow', 'tag', 'isOpen', 'cssModule', 'offset', 'fallbackPlacement', 'flip', 'container', 'target', 'modifiers', 'boundariesElement']
+        self.available_properties = ['children', 'id', 'className', 'placement', 'placementPrefix', 'arrowClassName', 'hideArrow', 'tag', 'isOpen', 'cssModule', 'offset', 'fallbackPlacement', 'flip', 'container', 'target', 'modifiers', 'boundariesElement']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

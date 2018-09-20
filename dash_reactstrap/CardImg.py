@@ -8,6 +8,7 @@ class CardImg(Component):
 
 
 Keyword arguments:
+- id (string | number; optional)
 - tag (string; optional)
 - top (boolean; optional)
 - bottom (boolean; optional)
@@ -16,13 +17,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, top=Component.UNDEFINED, bottom=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'top', 'bottom', 'className', 'cssModule']
+    def __init__(self, id=Component.UNDEFINED, tag=Component.UNDEFINED, top=Component.UNDEFINED, bottom=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'tag', 'top', 'bottom', 'className', 'cssModule']
         self._type = 'CardImg'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'top', 'bottom', 'className', 'cssModule']
+        self.available_properties = ['id', 'tag', 'top', 'bottom', 'className', 'cssModule']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

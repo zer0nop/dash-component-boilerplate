@@ -8,6 +8,8 @@ class Col(Component):
 
 
 Keyword arguments:
+- children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - xs (optional)
 - sm (optional)
@@ -20,13 +22,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, tag=Component.UNDEFINED, xs=Component.UNDEFINED, sm=Component.UNDEFINED, md=Component.UNDEFINED, lg=Component.UNDEFINED, xl=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, widths=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['tag', 'xs', 'sm', 'md', 'lg', 'xl', 'className', 'cssModule', 'widths']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, xs=Component.UNDEFINED, sm=Component.UNDEFINED, md=Component.UNDEFINED, lg=Component.UNDEFINED, xl=Component.UNDEFINED, className=Component.UNDEFINED, cssModule=Component.UNDEFINED, widths=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'xs', 'sm', 'md', 'lg', 'xl', 'className', 'cssModule', 'widths']
         self._type = 'Col'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['tag', 'xs', 'sm', 'md', 'lg', 'xl', 'className', 'cssModule', 'widths']
+        self.available_properties = ['children', 'id', 'tag', 'xs', 'sm', 'md', 'lg', 'xl', 'className', 'cssModule', 'widths']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
@@ -38,7 +40,7 @@ Available events: """
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(Col, self).__init__(**args)
+        super(Col, self).__init__(children=children, **args)
 
     def __repr__(self):
         if(any(getattr(self, c, None) is not None

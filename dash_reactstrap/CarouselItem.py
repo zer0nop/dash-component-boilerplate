@@ -9,6 +9,7 @@ class CarouselItem(Component):
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional)
+- id (string | number; optional)
 - tag (string; optional)
 - in (boolean; optional)
 - cssModule (dict; optional)
@@ -17,13 +18,13 @@ Keyword arguments:
 
 Available events: """
     @_explicitize_args
-    def __init__(self, children=None, tag=Component.UNDEFINED, cssModule=Component.UNDEFINED, slide=Component.UNDEFINED, className=Component.UNDEFINED, timeout=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'tag', 'in', 'cssModule', 'slide', 'className']
+    def __init__(self, children=None, id=Component.UNDEFINED, tag=Component.UNDEFINED, cssModule=Component.UNDEFINED, slide=Component.UNDEFINED, className=Component.UNDEFINED, timeout=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'tag', 'in', 'cssModule', 'slide', 'className']
         self._type = 'CarouselItem'
         self._namespace = 'dash_reactstrap'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['children', 'tag', 'in', 'cssModule', 'slide', 'className']
+        self.available_properties = ['children', 'id', 'tag', 'in', 'cssModule', 'slide', 'className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
