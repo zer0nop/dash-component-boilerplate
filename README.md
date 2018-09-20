@@ -1,4 +1,24 @@
-# Dash Component Boilerplate
+# Dash Reactstrap
+
+Porting Reactstrap Components to Dash.
+
+### *Work In Progress*
+
+Requires React 16.3.2 and React-DOM 16.3.2 dependency on [React Context API](https://reactjs.org/docs/context.html) (16.x).
+
+A few reactstrap components was using the legacy context API and needed to be ported to the new context API because Dash wraps each Dash-Component in a connect for the redux-store.   
+[details on legacy context api issue](https://stackoverflow.com/questions/37123203/context-not-being-passed-through-redux-connect)
+
+This needs Dash-Renderer with React 16.3.2 (branch: `react-v16.3.2`)   
+[see here](https://github.com/zer0nop/dash-renderer)
+
+Code in branch: `dash-reactstrap`
+
+---
+
+`Old Read Me:`
+~~~
+## Dash Component Boilerplate
 
 This repository contains the minimal set of code required to create your own custom Dash component.
 
