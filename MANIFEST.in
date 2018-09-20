@@ -1,4 +1,4 @@
-include my_dash_component/bundle.js
-include my_dash_component/metadata.json
-include my_dash_component/package.json
+include dash_reactstrap/bundle.js
+include dash_reactstrap/metadata.json
+include dash_reactstrap/package.json
 include README.md

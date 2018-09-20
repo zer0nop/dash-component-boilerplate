@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+    initOpen: PropTypes.bool.isRequired,
+    initNavbar: PropTypes.bool.isRequired,
+}
+
+const contextTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    inNavbar: PropTypes.bool.isRequired,
+};
+
+const defaultProps = {
+    isOpen: false,
+    inNavbar: false,
+};
+
+class ContextThing extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
+    render() {
+        return (
+            <div inOpen={}></div>
+        )
+    }
+}
+
+ContextThing.propTypes = propTypes;
+ContextThing.defaultProps = defaultProps;
+ContextThing.contextTypes = contextTypes;
+
+export default ContextThing
