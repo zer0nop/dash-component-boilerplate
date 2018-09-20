@@ -11,7 +11,7 @@ import {
   omit,
   focusableElements,
   TransitionTimeouts
-} from '../utils';
+} from '../utils/utils';
 
 function noop() { }
 

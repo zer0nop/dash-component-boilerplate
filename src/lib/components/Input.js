@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules, deprecated, warnOnce } from '../utils';
+import { mapToCssModules, deprecated, warnOnce } from '../utils/utils';
 
 const propTypes = {
   children: PropTypes.node,

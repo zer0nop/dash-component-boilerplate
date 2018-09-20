@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { canUseDOM } from '../utils';
+import { canUseDOM } from '../utils/utils';
 
 const propTypes = {
   children: PropTypes.node,

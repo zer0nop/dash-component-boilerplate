@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import isobject from 'lodash.isobject';
-import { mapToCssModules, deprecated } from '../utils';
+import { mapToCssModules, deprecated } from '../utils/utils';
 
 const colWidths = ['xs', 'sm', 'md', 'lg', 'xl'];
 

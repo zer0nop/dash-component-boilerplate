@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules, deprecated } from '../utils';
+import { mapToCssModules, deprecated } from '../utils/utils';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

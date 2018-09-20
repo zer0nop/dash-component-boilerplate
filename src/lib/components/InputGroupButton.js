@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import InputGroupAddon from './InputGroupAddon';
-import { warnOnce } from '../utils';
+import { warnOnce } from '../utils/utils';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

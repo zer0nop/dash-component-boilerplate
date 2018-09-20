@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { Arrow, Popper as ReactPopper } from 'react-popper';
-import { getTarget, targetPropType, mapToCssModules } from '../utils';
+import { getTarget, targetPropType, mapToCssModules } from '../utils/utils';
 
 const propTypes = {
   children: PropTypes.node,

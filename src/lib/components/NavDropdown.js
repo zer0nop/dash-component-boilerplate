@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { warnOnce, deprecated } from '../utils';
+import { warnOnce, deprecated } from '../utils/utils';
 import Dropdown from './Dropdown';
 
 const propTypes = {

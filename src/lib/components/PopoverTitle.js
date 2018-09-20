@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PopoverHeader from './PopoverHeader';
-import { warnOnce } from '../utils';
+import { warnOnce } from '../utils/utils';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

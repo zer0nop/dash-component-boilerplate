@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Popper } from 'react-popper';
-import { mapToCssModules } from '../utils';
+import { mapToCssModules } from '../utils/utils';
 
 const propTypes = {
   children: PropTypes.node,

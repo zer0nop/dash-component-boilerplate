@@ -15,8 +15,8 @@
   "license": "my-license",
   "dependencies": {
     "ramda": "^0.25.0",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
     "react-transition-group": "^2.3.1",
     "reactstrap": "^5",
     "bootstrap-4": "^4.0.0"

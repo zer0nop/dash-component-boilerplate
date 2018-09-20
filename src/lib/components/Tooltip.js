@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import PopperContent from './PopperContent';
-import { getTarget, mapToCssModules, omit, PopperPlacements, targetPropType } from '../utils';
+import { getTarget, mapToCssModules, omit, PopperPlacements, targetPropType } from '../utils/utils';
 
 const propTypes = {
   placement: PropTypes.oneOf(PopperPlacements),

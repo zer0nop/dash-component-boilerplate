@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
-import { deprecated } from '../utils';
+import { deprecated } from '../utils/utils';
 
 const propTypes = {
   disabled: PropTypes.bool,

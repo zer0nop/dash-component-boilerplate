@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { warnOnce } from '../utils';
+import { warnOnce } from '../utils/utils';
 import UncontrolledDropdown from './UncontrolledDropdown';
-import { deprecated } from '../utils';
+import { deprecated } from '../utils/utils';
 
 const propTypes = {
   disabled: PropTypes.bool,

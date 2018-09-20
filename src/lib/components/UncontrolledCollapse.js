@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from './Collapse';
-import { findDOMElements, defaultToggleEvents, addMultipleEventListeners } from '../utils';
+import { findDOMElements, defaultToggleEvents, addMultipleEventListeners } from '../utils/utils';
 
 const propTypes = {
   toggler: PropTypes.string.isRequired,

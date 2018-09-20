@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { Manager } from 'react-popper';
 import classNames from 'classnames';
-import { mapToCssModules, omit, keyCodes, deprecated } from '../utils';
+import { mapToCssModules, omit, keyCodes, deprecated } from '../utils/utils';
 
 const propTypes = {
   disabled: PropTypes.bool,
