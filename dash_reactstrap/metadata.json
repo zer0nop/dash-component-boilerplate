@@ -1834,14 +1834,6 @@
         "required": false,
         "description": ""
       }
-    },
-    "childContext": {
-      "direction": {
-        "type": {
-          "name": "string"
-        },
-        "required": false
-      }
     }
   },
   "src/lib/components/CarouselCaption.js": {
@@ -2020,7 +2012,7 @@
   },
   "src/lib/components/CarouselItem.js": {
     "description": "",
-    "displayName": "CarouselItem",
+    "displayName": "CarouselItemBase",
     "methods": [
       {
         "name": "onEnter",
@@ -2169,14 +2161,6 @@
         "defaultValue": {
           "value": "TransitionTimeouts.Carousel",
           "computed": true
-        },
-        "required": false
-      }
-    },
-    "context": {
-      "direction": {
-        "type": {
-          "name": "string"
         },
         "required": false
       }
@@ -7385,14 +7369,6 @@
           "computed": false
         }
       }
-    },
-    "childContext": {
-      "popperManager": {
-        "type": {
-          "name": "object"
-        },
-        "required": true
-      }
     }
   },
   "src/lib/components/Portal.js": {
@@ -7713,14 +7689,6 @@
         "required": false,
         "description": ""
       }
-    },
-    "childContext": {
-      "activeTabId": {
-        "type": {
-          "name": "any"
-        },
-        "required": false
-      }
     }
   },
   "src/lib/components/Table.js": {
@@ -7864,7 +7832,7 @@
   },
   "src/lib/components/TabPane.js": {
     "description": "",
-    "displayName": "TabPane",
+    "displayName": "TabPaneBase",
     "methods": [],
     "props": {
       "id": {
@@ -7921,14 +7889,6 @@
         },
         "required": false,
         "description": ""
-      }
-    },
-    "context": {
-      "activeTabId": {
-        "type": {
-          "name": "any"
-        },
-        "required": false
       }
     }
   },

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { Arrow, Popper as ReactPopper } from 'react-popper';
 import { getTarget, targetPropType, mapToCssModules } from '../utils/utils';
+import { PopperContext } from '../contexts/PopperContext'
 
 const propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -37,10 +38,6 @@ const defaultProps = {
   modifiers: {},
 };
 
-const childContextTypes = {
-  popperManager: PropTypes.object.isRequired,
-};
-
 class PopperContent extends React.Component {
   constructor(props) {
     super(props);
@@ -49,15 +46,6 @@ class PopperContent extends React.Component {
     this.setTargetNode = this.setTargetNode.bind(this);
     this.getTargetNode = this.getTargetNode.bind(this);
     this.state = {};
-  }
-
-  getChildContext() {
-    return {
-      popperManager: {
-        setTargetNode: this.setTargetNode,
-        getTargetNode: this.getTargetNode,
-      },
-    };
   }
 
   componentDidMount() {
@@ -174,8 +162,15 @@ class PopperContent extends React.Component {
 
     return (
       <ReactPopper {...attrs} modifiers={extendedModifiers} component={tag} className={popperClassName} x-placement={this.state.placement || attrs.placement}>
-        {children}
-        {!hideArrow && <Arrow className={arrowClassName} />}
+        <PopperContext.Provider value={{
+          popperManager: {
+            setTargetNode: this.setTargetNode,
+            getTargetNode: this.getTargetNode,
+          },
+        }}>
+          {children}
+          {!hideArrow && <Arrow className={arrowClassName} />}
+        </PopperContext.Provider>
       </ReactPopper>
     );
   }
@@ -193,6 +188,5 @@ class PopperContent extends React.Component {
 
 PopperContent.propTypes = propTypes;
 PopperContent.defaultProps = defaultProps;
-PopperContent.childContextTypes = childContextTypes;
 
 export default PopperContent;

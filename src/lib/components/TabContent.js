@@ -3,6 +3,7 @@ import { polyfill } from 'react-lifecycles-compat';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules, omit } from '../utils/utils';
+import { TabContext } from '../contexts/TabContext'
 
 
 const propTypes = {
@@ -15,10 +16,6 @@ const propTypes = {
 
 const defaultProps = {
   tag: 'div',
-};
-
-const childContextTypes = {
-  activeTabId: PropTypes.any
 };
 
 class TabContent extends Component {
@@ -36,16 +33,13 @@ class TabContent extends Component {
       activeTab: this.props.activeTab
     };
   }
-  getChildContext() {
-    return {
-      activeTabId: this.state.activeTab
-    };
-  }
+
   render() {
     const {
       className,
       cssModule,
       tag: Tag,
+      children
     } = this.props;
 
     const attributes = omit(this.props, Object.keys(propTypes));
@@ -53,7 +47,11 @@ class TabContent extends Component {
     const classes = mapToCssModules(classNames('tab-content', className), cssModule);
 
     return (
-      <Tag {...attributes} className={classes} />
+      <Tag {...attributes} className={classes}>
+        <TabContext.Provider value={{ activeTabId: this.state.activeTab }}>
+          {children}
+        </TabContext.Provider>
+      </Tag>
     );
   }
 }
@@ -63,4 +61,3 @@ export default TabContent;
 
 TabContent.propTypes = propTypes;
 TabContent.defaultProps = defaultProps;
-TabContent.childContextTypes = childContextTypes;

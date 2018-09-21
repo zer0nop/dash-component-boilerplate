@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 import { getTarget, targetPropType } from '../../utils';
+import { withPopperContext } from '../contexts/PopperContext'
 
-const PopperTargetHelper = (props, context) => {
-  context.popperManager.setTargetNode(getTarget(props.target));
+const PopperTargetHelperBase = (props) => {
+  props.context.popperManager.setTargetNode(getTarget(props.target));
   return null;
 };
 
-PopperTargetHelper.contextTypes = {
-  popperManager: PropTypes.object.isRequired,
-};
-
-PopperTargetHelper.propTypes = {
+PopperTargetHelperBase.propTypes = {
   target: targetPropType.isRequired,
 };
+
+const PopperTargetHelper = withPopperContext(PopperTargetHelperBase)
 
 export default PopperTargetHelper;

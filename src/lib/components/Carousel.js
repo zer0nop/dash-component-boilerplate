@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CarouselItem from './CarouselItem';
 import { mapToCssModules } from '../utils/utils';
+import { CarouselContext } from '../contexts/CarouselContext'
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -15,10 +16,6 @@ class Carousel extends React.Component {
       direction: 'right',
       indicatorClicked: false,
     };
-  }
-
-  getChildContext() {
-    return { direction: this.state.direction };
   }
 
   componentDidMount() {
@@ -163,10 +160,12 @@ class Carousel extends React.Component {
 
     return (
       <div className={outerClasses} onMouseEnter={this.hoverStart} onMouseLeave={this.hoverEnd}>
-        {wrappedIndicators}
-        {this.renderItems(carouselItems, innerClasses)}
-        {controlLeft}
-        {controlRight}
+        <CarouselContext.Provider value={{ direction: this.state.direction }}>
+          {wrappedIndicators}
+          {this.renderItems(carouselItems, innerClasses)}
+          {controlLeft}
+          {controlRight}
+        </CarouselContext.Provider>
       </div>
     );
   }
@@ -212,10 +211,6 @@ Carousel.defaultProps = {
   pause: 'hover',
   keyboard: true,
   slide: true,
-};
-
-Carousel.childContextTypes = {
-  direction: PropTypes.string
 };
 
 export default Carousel;

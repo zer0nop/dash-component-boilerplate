@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Transition from 'react-transition-group/Transition';
 import { mapToCssModules, TransitionTimeouts, TransitionStatuses } from '../utils/utils';
+import { withCarouselContext } from '../contexts/CarouselContext'
 
-class CarouselItem extends React.Component {
+class CarouselItemBase extends React.Component {
   constructor(props) {
     super(props);
 
@@ -49,7 +50,7 @@ class CarouselItem extends React.Component {
   }
 
   render() {
-    const { in: isIn, children, cssModule, slide, tag: Tag, className, ...transitionProps } = this.props;
+    const { in: isIn, children, cssModule, slide, tag: Tag, className, context, ...transitionProps } = this.props;
 
     return (
       <Transition
@@ -64,7 +65,7 @@ class CarouselItem extends React.Component {
         onExited={this.onExited}
       >
         {(status) => {
-          const { direction } = this.context;
+          const { direction } = context;
           const isActive = (status === TransitionStatuses.ENTERED) || (status === TransitionStatuses.EXITING);
           const directionClassName = (status === TransitionStatuses.ENTERING || status === TransitionStatuses.EXITING) &&
             this.state.startAnimation &&
@@ -90,7 +91,7 @@ class CarouselItem extends React.Component {
   }
 }
 
-CarouselItem.propTypes = {
+CarouselItemBase.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ...Transition.propTypes,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -101,15 +102,13 @@ CarouselItem.propTypes = {
   className: PropTypes.string,
 };
 
-CarouselItem.defaultProps = {
+CarouselItemBase.defaultProps = {
   ...Transition.defaultProps,
   tag: 'div',
   timeout: TransitionTimeouts.Carousel,
   slide: true,
 };
 
-CarouselItem.contextTypes = {
-  direction: PropTypes.string
-};
+const CarouselItem = withCarouselContext(CarouselItemBase)
 
 export default CarouselItem;
